@@ -1,0 +1,337 @@
+/* ====================
+   RESET + VARIÁVEIS
+==================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-gradient: linear-gradient(135deg, #fdfbfb 0%, #f7f3f0 100%);
+  --bg-card: #ffffff;
+
+  --color-primary: #2d2d2d;
+  --color-text: #2d2d2d;
+  --color-muted: #6b6b6b;
+  --color-whatsapp: #b4e7c7;
+
+  --radius: 16px;
+  --transition: 0.3s ease;
+}
+
+/* ====================
+   BASE GLOBAL
+==================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--bg-gradient);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+/* ====================
+   HEADER / NAV
+==================== */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+}
+
+nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: none;
+  gap: 1.5rem;
+}
+
+nav a {
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  color: var(--color-muted);
+}
+
+/* ====================
+   HERO
+==================== */
+
+#inicio {
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+#inicio h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#inicio p {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  margin-bottom: 1rem;
+}
+
+/* ====================
+   BOTÕES
+==================== */
+
+.btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.9rem 2.4rem;
+
+  border-radius: 50px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.btn-outline {
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.btn-dark {
+  background: black;
+  color: white;
+}
+
+/* ====================
+   SECTIONS
+==================== */
+
+main section {
+  padding: 3.5rem 1.5rem;
+}
+
+main section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+main section p {
+  text-align: center;
+  color: var(--color-muted);
+  margin-bottom: 1rem;
+}
+
+/* ====================
+   LISTAS
+==================== */
+
+ul, ol {
+  max-width: 600px;
+  margin: 1.5rem auto;
+}
+
+ul li, ol li {
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+#atendimento li,
+#local li {
+  display: flex;
+  justify-content: center;
+}
+
+/* ====================
+   PRODUTOS / CARDS
+==================== */
+
+.produtos-lista {
+  list-style: none;
+}
+
+.produto-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  margin-bottom: 1.5rem;
+}
+
+.produto-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.produto-info {
+  padding: 1.2rem;
+}
+
+.produto-info strong {
+  font-size: 1.3rem;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+/* ====================
+   CONTATO
+==================== */
+
+#contato {
+  text-align: center;
+}
+
+#contato ul {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+.fale-cmg {
+  margin-top: 2rem;
+}
+
+/* ====================
+   WHATSAPP FLOAT
+==================== */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  width: 60px;
+  height: 60px;
+
+  background: var(--color-whatsapp);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+.whatsapp-float img {
+  width: 30px;
+}
+
+/* ====================
+   FOOTER
+==================== */
+
+footer {
+  background: #2d2d2d;
+  color: white;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+/* ====================
+   DESKTOP
+==================== */
+
+@media (min-width: 768px) and (hover: hover) {
+
+  nav ul {
+    display: flex;
+  }
+
+  #inicio h1 {
+    font-size: 3.5rem;
+  }
+
+  main section {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  main section h2 {
+    font-size: 3rem;
+  }
+
+  .btn-outline {
+    display: block;
+    width: fit-content;
+    margin: 2rem auto 0;
+  }
+
+  .produtos-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .produtos-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  .produto-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .produto-card:hover {
+    transform: translateY(-6px);
+  }
+
+  .whatsapp-float {
+    transition: transform 0.2s ease;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.08);
+  }
+
+  .btn-outline {
+    display: inline-block;
+    justify-content: center;
+  }
+}
